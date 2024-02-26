@@ -1,0 +1,21 @@
+server:
+  port: 8090
+broker:
+  queue:
+    email:
+      name: default.email
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/ms-email
+    username: root
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+  rabbitmq:
+    addresses: amqps://qjpqspuf:CBMLkf4vMVy7HesjFWRdsAkXStBHUotE@woodpecker.rmq.cloudamqp.com/qjpqspuf
